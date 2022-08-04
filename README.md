@@ -2,8 +2,6 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
 
-
-
 ## Description
 
 A sample nestjs applicaiton which demonstrate the use of
@@ -20,8 +18,6 @@ A sample nestjs applicaiton which demonstrate the use of
 - NestJs Swagger with the ability to test api in browser using JWT token
 - Fixtures to load sample data for testing
 - Test Clients to make testing efficient
-
-
 
 The architecture is opinionated, comments and PR are appreciated.
 
@@ -45,6 +41,15 @@ $ yarn start:dev
 $ yarn start:prod
 ```
 
+## Running console commands
+
+```bash
+# create admin credentials
+
+yarn console create:admin --email=admin@gmail.com --password=password --displayName=Admin
+
+```
+
 Got to <a href="http://localhost:3000/api/docs ">http://localhost:3000/api/docs</a> to find the swagger doc.
 
 ## Roadmap
@@ -52,7 +57,6 @@ Got to <a href="http://localhost:3000/api/docs ">http://localhost:3000/api/docs<
 - Add third party providers Auth (Facebook, Google, Twitter, etc...)
 - Add Redis cache for blacklisted access tokens (for now it's in memory)
 - Update password, Lost password
-
 
 ## Test
 
@@ -64,4 +68,4 @@ $ yarn test:e2e
 
 ## License
 
-  Nest is [MIT licensed](LICENSE).
+Nest is [MIT licensed](LICENSE).
