@@ -1,6 +1,6 @@
 import { TestClient } from './utils/test-client';
 
-describe('AppController (e2e)', () => {
+describe('AuthController (e2e)', () => {
   let testClient: TestClient;
 
   beforeAll(async () => {
@@ -12,9 +12,15 @@ describe('AppController (e2e)', () => {
     await testClient.close();
   });
 
-  it('/ (POST) Admin Login Test', async () => {
+  it('/ (POST) Get Refresh Token Test', async () => {
     const login = await testClient.login('patrick@gmail.com', 'patrick');
     expect(login.token).toBeDefined();
     expect(login.refreshToken).toBeDefined();
+
+    await new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(true);
+      }, 1000);
+    });
   });
 });

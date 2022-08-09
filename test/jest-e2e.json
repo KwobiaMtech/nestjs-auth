@@ -5,5 +5,15 @@
   "testRegex": ".e2e-spec.ts$",
   "transform": {
     "^.+\\.(t|j)s$": "ts-jest"
-  }
+  },
+  "setupFilesAfterEnv": ["jest-sorted"],
+  "maxWorkers": 1,
+  "bail": 1,
+  "testTimeout": 45000,
+  "verbose": false,
+  "silent": false,
+  "forceExit": true,
+  "globalTeardown": "./utils/jest-global-teardown.js",
+  "coverageDirectory": "./coverage-e2e",
+  "collectCoverageFrom": ["src/**/{!(console|main|*.spec|*.command),}.ts"]
 }

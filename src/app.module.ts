@@ -3,7 +3,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConsoleModule } from 'nestjs-console';
-import { connectionSource, dataSource } from 'ormconfig';
+import { connectionSource } from '../ormconfig';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { globalConfig } from './config';
@@ -28,7 +28,6 @@ import { AppRequestContext } from './utils/app-request.context';
     }),
     MainModule,
     AuthModule,
-   
   ],
   controllers: [AppController],
   providers: [AppService],
